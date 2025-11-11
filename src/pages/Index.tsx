@@ -1,12 +1,29 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { AnnouncementBar } from "@/components/AnnouncementBar";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { ValueSection } from "@/components/ValueSection";
+import { HowItWorks } from "@/components/HowItWorks";
+import { Pricing } from "@/components/Pricing";
+import { FAQ } from "@/components/FAQ";
+import { RegistrationForm } from "@/components/RegistrationForm";
+import { Footer } from "@/components/Footer";
+import { MobileStickyBar } from "@/components/MobileStickyBar";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen font-sans">
+      <AnnouncementBar />
+      <Header />
+      <main>
+        <Hero />
+        <ValueSection />
+        <HowItWorks />
+        <Pricing />
+        <FAQ />
+        <RegistrationForm />
+      </main>
+      <Footer />
+      <MobileStickyBar />
     </div>
   );
 };
