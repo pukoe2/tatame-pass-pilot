@@ -27,12 +27,12 @@ export const Hero = () => {
               </p>
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-4">
               <Button
                 onClick={scrollToCadastro}
                 data-event="hero_cta_click"
                 size="lg"
-                className="w-full md:w-auto text-base px-8"
+                className="w-full text-base px-8"
               >
                 Cadastrar minha academia
               </Button>
@@ -41,8 +41,9 @@ export const Hero = () => {
                 data-event="whatsapp_click"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="block"
               >
-                <Button variant="outline" className="w-full md:w-auto">
+                <Button variant="outline" className="w-full">
                   Falar no WhatsApp
                 </Button>
               </a>
