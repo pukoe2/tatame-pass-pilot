@@ -213,8 +213,8 @@ export const RegistrationForm = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="<50">&lt;50</SelectItem>
-                  <SelectItem value="50-150">50–150</SelectItem>
-                  <SelectItem value="150-300">150–300</SelectItem>
+                  <SelectItem value="50–150">50–150</SelectItem>
+                  <SelectItem value="150–300">150–300</SelectItem>
                   <SelectItem value="300+">300+</SelectItem>
                 </SelectContent>
               </Select>
