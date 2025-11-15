@@ -214,19 +214,6 @@ export const RegistrationForm = () => {
             <Button type="submit" data-event="form_submit" size="lg" className="w-full">
               Enviar cadastro
             </Button>
-
-            <div className="text-center pt-4">
-              <a
-                href={WHATSAPP_LINK}
-                data-event="whatsapp_click"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="ghost" size="sm">
-                  Falar no WhatsApp
-                </Button>
-              </a>
-            </div>
           </form>
         </Card>
       </div>

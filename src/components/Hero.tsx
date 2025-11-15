@@ -36,9 +36,6 @@ export const Hero = () => {
               >
                 Cadastrar minha academia
               </Button>
-              <p className="text-sm text-muted-foreground">
-                Leva 3 minutos. Sem compromisso.
-              </p>
               <a
                 href={WHATSAPP_LINK}
                 data-event="whatsapp_click"
