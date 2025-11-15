@@ -6,7 +6,7 @@ export const AnnouncementBar = () => {
       <div className="container mx-auto max-w-7xl flex items-center justify-center gap-2">
         <Megaphone className="h-4 w-4 flex-shrink-0" />
         <p className="text-sm font-medium">
-          Lançamento para as primeiras 5 academias: 1º mês sem taxa da plataforma.
+          Lançamento no Brasil: 1º mês sem taxa para cadastros até 30 de Novembro.
         </p>
       </div>
     </div>
