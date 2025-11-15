@@ -96,8 +96,7 @@ export const RegistrationForm = () => {
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">Cadastro recebido!</h3>
               <p className="text-muted-foreground">
-                Recebemos seus dados. Em breve entraremos em contato para os próximos passos do
-                piloto.
+                Recebemos seus dados. Em breve entraremos em contato para os próximos passos.
               </p>
             </div>
             <a
