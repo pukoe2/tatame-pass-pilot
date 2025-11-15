@@ -19,7 +19,7 @@ export const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Planos por assinatura no cartão e PIX, sem dor de cabeça.
+                Venda planos de assinatura da sua academia no cartão, sem dor de cabeça.
               </h1>
               <p className="text-lg text-muted-foreground">
                 Uma plataforma para vender, renovar e controlar planos. Receba no cartão com
@@ -34,7 +34,7 @@ export const Hero = () => {
                 size="lg"
                 className="w-full md:w-auto text-base px-8"
               >
-                Quero participar do piloto
+                Cadastrar minha academia
               </Button>
               <p className="text-sm text-muted-foreground">
                 Leva 3 minutos. Sem compromisso.

@@ -10,7 +10,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle2 } from "lucide-react";
 
@@ -31,7 +30,6 @@ export const RegistrationForm = () => {
     utmSource: "",
     utmMedium: "",
     utmCampaign: "",
-    aceitoTermos: false,
   });
 
   useEffect(() => {
@@ -46,15 +44,6 @@ export const RegistrationForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (!formData.aceitoTermos) {
-      toast({
-        title: "Erro",
-        description: "Você precisa aceitar os termos para continuar.",
-        variant: "destructive",
-      });
-      return;
-    }
 
     // Simulate form submission
     console.log("Form submitted:", formData);
@@ -103,7 +92,10 @@ export const RegistrationForm = () => {
       <div className="container mx-auto max-w-2xl px-4">
         <Card className="p-8">
           <div className="mb-8">
-            <h2 className="text-3xl font-bold mb-2">Candidate sua academia ao piloto</h2>
+            <h2 className="text-3xl font-bold mb-2">Cadastre agora sua academia</h2>
+            <p className="text-sm text-muted-foreground">
+              Leva 3 minutos. Sem compromisso.
+            </p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -219,21 +211,8 @@ export const RegistrationForm = () => {
               </Select>
             </div>
 
-            <div className="flex items-start gap-3 pt-4">
-              <Checkbox
-                id="termos"
-                checked={formData.aceitoTermos}
-                onCheckedChange={(checked) =>
-                  setFormData({ ...formData, aceitoTermos: checked as boolean })
-                }
-              />
-              <Label htmlFor="termos" className="text-sm leading-relaxed cursor-pointer">
-                Li e aceito os Termos de Uso e a Política de Privacidade (LGPD). *
-              </Label>
-            </div>
-
             <Button type="submit" data-event="form_submit" size="lg" className="w-full">
-              Criar conta e começar
+              Enviar cadastro
             </Button>
 
             <div className="text-center pt-4">

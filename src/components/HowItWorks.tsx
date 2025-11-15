@@ -68,7 +68,7 @@ export const HowItWorks = () => {
             data-event="flow_cta_click"
             size="lg"
           >
-            Quero participar do piloto
+            Cadastrar minha academia
           </Button>
         </div>
       </div>

@@ -30,22 +30,21 @@ export const Pricing = () => {
                 <Check className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold">Taxa por transação</p>
-                  <p className="text-sm text-muted-foreground">Taxa do cartão + 1,99%</p>
+                  <p className="text-sm text-muted-foreground">Taxa do provedor + 1,99%</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-accent flex-shrink-0 mt-1" />
                 <div>
                   <p className="font-semibold">PIX</p>
-                  <p className="text-sm text-muted-foreground">0,5% por operação concluída</p>
+                  <p className="text-sm text-muted-foreground">Taxa do provedor + 0,5%</p>
                 </div>
               </div>
             </div>
 
             <div className="pt-4 border-t">
               <p className="text-xs text-muted-foreground">
-                Antecipação de cartão opcional. Taxas de bandeiras não incluídas. Emissão de NF ao
-                aluno feita pela academia.
+                Emissão de NF ao aluno feita pela academia.
               </p>
             </div>
 
