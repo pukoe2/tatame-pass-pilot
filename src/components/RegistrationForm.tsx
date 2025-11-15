@@ -45,25 +45,27 @@ export const RegistrationForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
-    const form = e.currentTarget;
-    const googleFormData = new FormData();
-    
-    // Map form fields to Google Form entry IDs
-    googleFormData.append("entry.1612334256", formData.nomeAcademia);
-    googleFormData.append("entry.2051999811", formData.responsavel);
-    googleFormData.append("entry.1442187245", formData.whatsapp);
-    googleFormData.append("entry.1245525953", formData.email);
-    googleFormData.append("entry.859534010", formData.cidadeUF);
-    googleFormData.append("entry.1048784846", formData.modalidade);
-    googleFormData.append("entry.1100021318", formData.numeroAlunos);
-    googleFormData.append("entry.427857745", formData.formaCobranca);
+    // Create URLSearchParams for Google Forms submission
+    const formParams = new URLSearchParams();
+    formParams.append("entry.1612334256", formData.nomeAcademia);
+    formParams.append("entry.2051999811", formData.responsavel);
+    formParams.append("entry.1442187245", formData.whatsapp);
+    formParams.append("entry.1245525953", formData.email);
+    formParams.append("entry.859534010", formData.cidadeUF);
+    formParams.append("entry.1048784846", formData.modalidade);
+    formParams.append("entry.1100021318", formData.numeroAlunos);
+    formParams.append("entry.427857745", formData.formaCobranca);
+    formParams.append("submit", "Submit");
 
     try {
       // Submit to Google Forms
       await fetch("https://docs.google.com/forms/d/e/1FAIpQLSfRzf6nTUrSR5US8LnfVXVFG2yhyGuDblbYS7PmyqBUKiW8mQ/formResponse", {
         method: "POST",
-        body: googleFormData,
-        mode: "no-cors", // Google Forms requires no-cors
+        body: formParams,
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
       });
 
       toast({
@@ -152,7 +154,10 @@ export const RegistrationForm = () => {
               <Input
                 id="whatsapp"
                 type="tel"
+                inputMode="tel"
                 placeholder="(11) 99999-9999"
+                pattern="^(\+?55\s?)?\(?\d{2}\)?\s?\d{4,5}-?\d{4}$"
+                title="Formato: (11) 98765-4321"
                 required
                 value={formData.whatsapp}
                 onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
